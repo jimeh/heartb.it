@@ -1,5 +1,4 @@
 # Module Dependencies
-
 express = require 'express'
 app = module.exports = express.createServer()
 
@@ -26,7 +25,6 @@ app.get '/', (req, res) ->
 
 
 # Set port and start server.
-app.listen 3000
 app.listen process.env.PORT || 3000
 
 console.log "Express server listening on port %d in %s mode",
