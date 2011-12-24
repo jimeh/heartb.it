@@ -1,0 +1,10 @@
+{
+  "name": "api.jimeh.me",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "2.5.0",
+    "coffee-script": ">= 0.0.0",
+    "coffeekup": ">= 0.0.0"
+  }
+}
