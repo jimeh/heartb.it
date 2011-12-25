@@ -18,7 +18,7 @@ app.configure 'development', ->
 app.configure 'production', ->
   app.use express.errorHandler()
   app.use require('./middleware/host_redirect')
-    "www.heartb.it": "http://heartb.it"
+    "www.heartb.it": "http://heartb.it/"
 
 
 # Routes

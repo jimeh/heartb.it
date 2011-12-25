@@ -24,7 +24,7 @@
   app.configure('production', function() {
     app.use(express.errorHandler());
     return app.use(require('./middleware/host_redirect')({
-      "www.heartb.it": "http://heartb.it"
+      "www.heartb.it": "http://heartb.it/"
     }));
   });
 
