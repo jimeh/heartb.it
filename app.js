@@ -24,7 +24,8 @@
   app.configure('production', function() {
     app.use(express.errorHandler);
     return app.use(function(req, res, next) {
-      return console.log("Hostname: %s", req.header('Host'));
+      console.log("Hostname: %s", req.header('Host'));
+      return next();
     });
   });
 
