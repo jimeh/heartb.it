@@ -19,10 +19,10 @@ app.configure 'production', ->
   app.use express.errorHandler
   app.use (req, res, next) ->
     console.log "Hostname: %s", req.header('Host')
-    if req.header('Host') == 'www.heartb.it'
-      res.redirect('http://heartb.it/')
-    else
-      next()
+    # if req.header('Host') == 'www.heartb.it'
+    #   res.redirect('http://heartb.it/')
+    # else
+    #   next()
 
 
 # Routes

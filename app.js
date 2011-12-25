@@ -24,12 +24,7 @@
   app.configure('production', function() {
     app.use(express.errorHandler);
     return app.use(function(req, res, next) {
-      console.log("Hostname: %s", req.header('Host'));
-      if (req.header('Host') === 'www.heartb.it') {
-        return res.redirect('http://heartb.it/');
-      } else {
-        return next();
-      }
+      return console.log("Hostname: %s", req.header('Host'));
     });
   });
 
