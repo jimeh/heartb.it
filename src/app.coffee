@@ -9,7 +9,6 @@ app.configure ->
   app.set 'view engine', 'coffee'
   app.register '.coffee', require('coffeekup').adapters.express
   app.use (req, res, next) ->
-    console.log "Hostname: %s", req.header('Host')
     if req.header('Host') == 'www.heartb.it'
       res.redirect('http://heartb.it/')
     else
