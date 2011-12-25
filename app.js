@@ -9,14 +9,6 @@
     app.set('views', __dirname + '/views');
     app.set('view engine', 'coffee');
     app.register('.coffee', require('coffeekup').adapters.express);
-    app.use(function(req, res, next) {
-      console.log("Hostname: %s", req.header('Host'));
-      if (req.header('Host') === 'www.heartb.it') {
-        return res.redirect('http://heartb.it/');
-      } else {
-        return next();
-      }
-    });
     app.use(express.bodyParser());
     app.use(express.methodOverride());
     return app.use(express.static(__dirname + '/public'));
@@ -30,7 +22,15 @@
   });
 
   app.configure('production', function() {
-    return app.use(express.errorHandler);
+    app.use(express.errorHandler);
+    return app.use(function(req, res, next) {
+      console.log("Hostname: %s", req.header('Host'));
+      if (req.header('Host') === 'www.heartb.it') {
+        return res.redirect('http://heartb.it/');
+      } else {
+        return next();
+      }
+    });
   });
 
   app.get('/', function(req, res) {
