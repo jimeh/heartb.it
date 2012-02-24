@@ -1,29 +1,39 @@
 body {
-	font-family: helvetica, arial, sans-serif;
-	padding: 0;
-	margin: 0;
+  font-family: helvetica, arial, sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 #logo {
-	background: url("../images/heartb.it.png") center center no-repeat;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin: -15px 0px 0px -75px;
-	height: 30px;
-	width: 150px;
+  background: url("../images/heartb.it.png") center center no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -15px 0px 0px -75px;
+  height: 30px;
+  width: 150px;
 }
 
 #contact {
-	font-size: 12px;
-	position: absolute;
-	right: 8px;
-	bottom: 5px;
+  font-size: 12px;
+  position: absolute;
+  right: 8px;
+  bottom: 5px;
 }
-	#contact a {
-		color: #aaa;
-		text-decoration: none;
-	}
-	#contact a:hover {
-		text-decoration: underline;
-	}
+  #contact a {
+    color: #aaa;
+    text-decoration: none;
+  }
+  #contact a:hover {
+    text-decoration: underline;
+  }
+
+#not-found {
+  background: url("../images/404-dead-link.png") center center no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -150px 0px 0px -250px;
+  height: 300px;
+  width: 500px;
+}
