@@ -29,7 +29,9 @@
   });
 
   app.get('/', function(req, res) {
-    return res.render('index');
+    return res.render('index', {
+      format: true
+    });
   });
 
   app.listen(process.env.PORT || 3000);
