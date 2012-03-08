@@ -12,14 +12,14 @@ describe 'host_redirect', ->
 
   describe 'when request does not match any entry in map', ->
     it 'next() is called to pass on the request', (done) ->
-      req = { header: -> 'www.bar.com' }
+      req = header: -> 'www.bar.com'
       res = {}
       next = -> done()
       redirector(req, res, next)
 
   describe 'when request matches an entry in map', ->
     it 'req.redirect() is called with the new URL', (done) ->
-      req = { header: -> 'img.foo.com' }
+      req = header: -> 'img.foo.com'
       res =
         redirect: (url) ->
           url.should.equal(redirect_map[req.header()])
