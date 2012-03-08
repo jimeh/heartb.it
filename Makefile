@@ -1,11 +1,14 @@
 .SILENT:
-.PHONY: build watch docs test
+.PHONY: build watch docs test deploy
 
 BIN = ./node_modules/.bin
 COFFEE_SRC = ./src
 COFFEE_OUT = ./
 REPORTER = spec
 TEST_DIR = ./test
+
+deploy:
+	git push heroku master
 
 build:
 	$(BIN)/coffee -c -o $(COFFEE_OUT) $(COFFEE_SRC)
