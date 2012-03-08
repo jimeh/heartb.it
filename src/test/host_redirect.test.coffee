@@ -1,6 +1,6 @@
 require 'should'
 
-host_rewrite = require '../middleware/host_redirect'
+host_redirect = require '../middleware/host_redirect'
 
 describe 'host_redirect', ->
 
@@ -8,7 +8,7 @@ describe 'host_redirect', ->
     'www.foo.com': 'http://foo.com/',
     'img.foo.com': 'http://images.foo.com/'
 
-  redirector = host_rewrite(redirect_map)
+  redirector = host_redirect(redirect_map)
 
   describe 'when request does not match any entry in map', ->
     it 'next() is called to pass on the request', (done) ->

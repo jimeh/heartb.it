@@ -1,9 +1,9 @@
 (function() {
-  var host_rewrite;
+  var host_redirect;
 
   require('should');
 
-  host_rewrite = require('../middleware/host_redirect');
+  host_redirect = require('../middleware/host_redirect');
 
   describe('host_redirect', function() {
     var redirect_map, redirector;
@@ -11,7 +11,7 @@
       'www.foo.com': 'http://foo.com/',
       'img.foo.com': 'http://images.foo.com/'
     };
-    redirector = host_rewrite(redirect_map);
+    redirector = host_redirect(redirect_map);
     describe('when request does not match any entry in map', function() {
       return it('next() is called to pass on the request', function(done) {
         var next, req, res;
