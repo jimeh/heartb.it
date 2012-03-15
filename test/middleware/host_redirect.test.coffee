@@ -1,6 +1,6 @@
 require 'should'
 
-host_redirect = require '../middleware/host_redirect'
+host_redirect = require '../../middleware/host_redirect'
 
 describe 'host_redirect', ->
 

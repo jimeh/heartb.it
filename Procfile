@@ -1,1 +1,1 @@
-web: node heartbit.js
+web: coffee server.coffee

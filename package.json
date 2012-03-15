@@ -11,5 +11,9 @@
     "docco": "*",
     "mocha": "*",
     "should": "*"
+  },
+  "engine": {
+    "node": "0.6.x",
+    "npm": "1.x.x"
   }
 }
