@@ -1,5 +1,5 @@
 .SILENT:
-.PHONY: docs test deploy
+.PHONY: deploy docs read-docs test
 
 BIN = ./node_modules/.bin
 
@@ -12,6 +12,9 @@ deploy:
 
 docs:
 	$(BIN)/docco app.coffee $(shell find $(LIB_PATH) -name '*.coffee')
+
+read-docs:
+	open docs/app.html
 
 test:
 	$(BIN)/mocha -R $(REPORTER) $(shell find $(TEST_PATH) -name '*.test.coffee')
