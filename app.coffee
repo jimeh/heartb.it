@@ -1,8 +1,11 @@
 # Module Dependencies.
 express = require 'express'
 
-# Create server instance.
-app = module.exports = express.createServer()
+# Create app instance.
+app = express.createServer()
+
+# Export the app.
+module.exports = app
 
 # Configuration.
 app.configure ->
@@ -29,10 +32,3 @@ app.get '/', (req, res) ->
 # 404 Fallback
 app.get '*', (req, res) ->
   res.render '404', format: true
-
-# Set port and start server.
-app.listen process.env.PORT || 3000
-
-# Print debug
-console.log "Express app listening on port %d in %s mode",
-  app.address().port, app.settings.env
