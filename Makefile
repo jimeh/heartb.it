@@ -1,20 +1,28 @@
 .SILENT:
-.PHONY: deploy docs read-docs test
+.PHONY: deploy docs read-docs test build watch
 
 BIN = ./node_modules/.bin
 
-LIB_PATH = ./lib
-TEST_PATH = ./test
 REPORTER = spec
+TESTS    = ./test/**/*.test.coffee
+SOURCES  = ./*.coffee ./lib/**/*.coffee
 
 deploy:
 	git push heroku master
 
 docs:
-	$(BIN)/docco app.coffee $(shell find $(LIB_PATH) -name '*.coffee')
+	$(BIN)/docco $(shell find $(SOURCES))
 
 read-docs:
 	open docs/app.html
 
 test:
-	$(BIN)/mocha -R $(REPORTER) $(shell find $(TEST_PATH) -name '*.test.coffee')
+	NODE_ENV=test $(BIN)/mocha \
+		--reporter $(REPORTER) \
+		$(shell find $(TESTS))
+
+build:
+	$(BIN)/coffee -c $(SOURCES)
+
+watch:
+	$(BIN)/coffee -cw $(SOURCES)
