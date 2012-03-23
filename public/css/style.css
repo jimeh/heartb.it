@@ -27,7 +27,8 @@ body {
     text-decoration: none;
   }
   #contact a:hover {
-    text-decoration: underline;
+    border-bottom: 2px solid #ddd;
+    text-decoration: none;
   }
 
 #not-found {
