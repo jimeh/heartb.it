@@ -18,6 +18,7 @@ read-docs:
 
 test:
 	NODE_ENV=test $(BIN)/mocha \
+		--compilers coffee:coffee-script \
 		--reporter $(REPORTER) \
 		$(shell find $(TESTS))
 
