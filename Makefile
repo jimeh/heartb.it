@@ -7,6 +7,8 @@ REPORTER = spec
 TESTS    = ./test/**/*.test.coffee
 SOURCES  = ./*.coffee ./lib/**/*.coffee
 
+default: test
+
 deploy:
 	git push heroku master
 
