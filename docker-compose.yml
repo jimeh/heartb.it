@@ -1,0 +1,8 @@
+version: "2"
+services:
+  heartbit:
+    build: .
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:80"
