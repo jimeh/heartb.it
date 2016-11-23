@@ -1,0 +1,8 @@
+# Site settings
+title: heartb.it
+baseurl: "" # the subpath of your site, e.g. /blog/
+hostname: heartb.it # used to determine if google analytics should be triggered
+url: http://heartb.it # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown

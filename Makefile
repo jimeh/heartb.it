@@ -1,31 +1,5 @@
+serve:
+	bundle exec jekyll serve
+
 .SILENT:
-.PHONY: deploy docs read-docs test build watch
-
-BIN = ./node_modules/.bin
-
-REPORTER = spec
-TESTS    = ./test/**/*.test.coffee
-SOURCES  = ./*.coffee ./lib/**/*.coffee
-
-default: test
-
-deploy:
-	git push heroku master
-
-docs:
-	$(BIN)/docco $(shell find $(SOURCES))
-
-read-docs:
-	open docs/app.html
-
-test:
-	NODE_ENV=test $(BIN)/mocha \
-		--compilers coffee:coffee-script \
-		--reporter $(REPORTER) \
-		$(shell find $(TESTS))
-
-build:
-	$(BIN)/coffee -c $(SOURCES)
-
-watch:
-	$(BIN)/coffee -cw $(SOURCES)
+.PHONY:

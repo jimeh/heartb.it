@@ -1,0 +1,48 @@
+body {
+    font-family: 'Open Sans', helvetica, arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#logo {
+    background: url("../images/heartb.it.png") center center no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -18px 0px 0px -75px;
+    height: 37px;
+    width: 150px;
+}
+
+#contact {
+    font-size: 12px;
+    font-weight: 300;
+    position: absolute;
+    right: 8px;
+    bottom: 5px;
+
+    a {
+        color: #aaa;
+        text-decoration: none;
+        -webkit-transition-duration: 0.3s;
+        -webkit-transition-property: color, border;
+        -webkit-transition-timing-function: ease-in;
+
+        &:hover {
+            color: #555;
+            -webkit-transition-duration: 0.3s;
+            -webkit-transition-property: color, border;
+            -webkit-transition-timing-function: ease-in;
+        }
+    }
+}
+
+#not-found {
+    background: url("../images/404-dead-link.png") center center no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0px 0px -250px;
+    height: 300px;
+    width: 500px;
+}
